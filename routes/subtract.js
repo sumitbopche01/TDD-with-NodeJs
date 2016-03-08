@@ -1,3 +1,4 @@
+var subtract = require('../lib/subtract');
 module.exports = function(req, res, next){
-  return res.status(501).end('');
-}
+  return res.json({ result : subtract(req.a, req.b) });
+};
